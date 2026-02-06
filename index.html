@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documento Maestro Definitivo - Sistema CDE</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Documento Maestro Definitivo</p>
+        <h1>Sistema web privado para lectura de desprendibles de pago</h1>
+        <p class="hero__subtitle">Cálculo automático de Capacidad de Endeudamiento (CDE)</p>
+        <div class="hero__actions">
+          <a class="button" href="#proposito">Ver propósito</a>
+          <a class="button button--ghost" href="#flujo">Ver flujo</a>
+        </div>
+      </div>
+      <div class="hero__card">
+        <h2>Resumen rápido</h2>
+        <ul>
+          <li>Lectura automática de nómina (PDF/imagen).</li>
+          <li>Extracción financiera estructurada.</li>
+          <li>Cálculo CDE y simulación de compra de cartera.</li>
+          <li>Historial, auditoría y trazabilidad completa.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav__container">
+      <a class="nav__brand" href="#inicio">CDE</a>
+      <div class="nav__links">
+        <a href="#proposito">Propósito</a>
+        <a href="#acceso">Acceso</a>
+        <a href="#roles">Roles</a>
+        <a href="#flujo">Flujo</a>
+        <a href="#calculo">Cálculo</a>
+        <a href="#pagadurias">Pagadurías</a>
+        <a href="#historial">Historial</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section" id="proposito">
+      <div class="container">
+        <h2>1. Propósito del sistema</h2>
+        <p>
+          Plataforma web privada y segura para leer automáticamente desprendibles de pago, extraer
+          información financiera precisa y calcular la Capacidad de Endeudamiento (CDE) aplicando
+          reglas estrictas.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Objetivos clave</h3>
+            <ol>
+              <li>Leer documentos PDF o imagen.</li>
+              <li>Extraer datos financieros estructurados.</li>
+              <li>Calcular CDE automáticamente.</li>
+              <li>Simular compra de cartera.</li>
+              <li>Registrar historial y auditoría.</li>
+              <li>Eliminar errores humanos.</li>
+            </ol>
+          </div>
+          <div class="card card--highlight">
+            <h3>Principio clave</h3>
+            <p>
+              El usuario no ingresa valores financieros manualmente. Solo puede corregir casos
+              excepcionales, como pagaduría incorrecta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="acceso">
+      <div class="container">
+        <h2>2. Acceso y control del sistema</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Usuario raíz (Administrador General)</h3>
+            <ul>
+              <li>Único usuario raíz creado manualmente.</li>
+              <li>Correo: <strong>solucionesfinancierasssc@gmail.com</strong></li>
+              <li>Contraseña: <strong>Fonsofi1218</strong></li>
+            </ul>
+            <p class="note">*Rotar credenciales antes de producción.</p>
+            <ul>
+              <li>Crea, modifica y elimina usuarios.</li>
+              <li>Asigna roles y permisos.</li>
+              <li>Bloquea o autoriza accesos.</li>
+              <li>Configura pagadurías, márgenes y sectores.</li>
+              <li>Visualiza historial completo y auditoría.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Usuarios del sistema</h3>
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Rol</th>
+                    <th>Funciones principales</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Santiago</td>
+                    <td>1218</td>
+                    <td>Administrador General</td>
+                    <td>Control total, usuarios, roles, historial</td>
+                  </tr>
+                  <tr>
+                    <td>Yiramar</td>
+                    <td>0817</td>
+                    <td>Administradora</td>
+                    <td>Subir documentos, simular compra de cartera, historial propio</td>
+                  </tr>
+                  <tr>
+                    <td>Yadira</td>
+                    <td>1126</td>
+                    <td>Administradora</td>
+                    <td>Subir documentos, simular compra de cartera, historial propio</td>
+                  </tr>
+                  <tr>
+                    <td>Yinayu</td>
+                    <td>0116</td>
+                    <td>Asesor</td>
+                    <td>Subir documentos, historial propio</td>
+                  </tr>
+                  <tr>
+                    <td>Mariafe</td>
+                    <td>1224</td>
+                    <td>Asesor</td>
+                    <td>Subir documentos, historial propio</td>
+                  </tr>
+                  <tr>
+                    <td>prueba</td>
+                    <td>1221</td>
+                    <td>Asesor</td>
+                    <td>Subir documentos, historial propio</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="list">
+              <li>Administrador General: acceso total.</li>
+              <li>Administradoras: acceso a sus documentos y simulaciones.</li>
+              <li>Asesores: solo sus documentos e historial.</li>
+              <li>Contraseñas iniciales se cambian en el primer acceso.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roles">
+      <div class="container">
+        <h2>3. Roles y permisos</h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Rol</th>
+                <th>Funciones</th>
+                <th>Restricciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Público</td>
+                <td>Calcular CDE sin guardar historial.</td>
+                <td>No registra documentos, no ve historial.</td>
+              </tr>
+              <tr>
+                <td>Asesor</td>
+                <td>Subir documentos, ver y editar su historial.</td>
+                <td>No ve datos de otros usuarios.</td>
+              </tr>
+              <tr>
+                <td>Administradora</td>
+                <td>Igual que Asesor + ajustes internos según permisos.</td>
+                <td>No ve datos de otros usuarios.</td>
+              </tr>
+              <tr>
+                <td>Administrador General</td>
+                <td>Acceso total: usuarios, roles, historial, catálogos.</td>
+                <td>Acceso completo a todos los datos.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flujo">
+      <div class="container">
+        <h2>4. Flujo completo del usuario</h2>
+        <div class="timeline">
+          <div class="timeline__item">Inicio de sesión (correo y contraseña).</div>
+          <div class="timeline__item">Verificación opcional por SMS (doble factor).</div>
+          <div class="timeline__item">Carga de documento (PDF o imagen).</div>
+          <div class="timeline__item">Vista previa automática del documento.</div>
+          <div class="timeline__item">Extracción automática de datos (OCR, normalización, identificación).</div>
+          <div class="timeline__item">Presentación de datos y corrección de pagaduría si aplica.</div>
+          <div class="timeline__item">Cálculo automático de CDE.</div>
+          <div class="timeline__item">Simulación de compra de cartera.</div>
+          <div class="timeline__item">Guardado de historial completo según rol.</div>
+          <div class="timeline__item">Descarga de evidencias.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lectura">
+      <div class="container">
+        <h2>5. Lectura automática del documento</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Datos detectados</h3>
+            <ul>
+              <li>Nombre completo del cliente.</li>
+              <li>Pagaduría.</li>
+              <li>Tipo de vínculo: pensionado o trabajador activo.</li>
+              <li>Fecha del documento.</li>
+              <li>Fecha y hora de lectura.</li>
+              <li>Usuario que realiza la carga.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tecnología recomendada</h3>
+            <p>OCR avanzado + preprocesamiento de imagen + validación de patrones de texto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ingresos">
+      <div class="container">
+        <h2>6. Detección de ingresos</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Conceptos válidos</h3>
+            <ul>
+              <li>Salario / ingreso salario.</li>
+              <li>Pensión / mesada / pensión de gracia.</li>
+              <li>Honorarios (si aplica).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Proceso</h3>
+            <ol>
+              <li>Detección automática de conceptos monetarios.</li>
+              <li>Suma de ingresos → Ingreso total.</li>
+              <li>Validación de duplicados y consistencia.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="salud">
+      <div class="container">
+        <h2>7. Detección de salud</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Conceptos detectables</h3>
+            <p>Salud, EPS, ADRES, FOSYGA, 4% SERVIMEDIC, 1% CASURAUTOM.</p>
+          </div>
+          <div class="card">
+            <h3>Reglas</h3>
+            <ul>
+              <li>Se descuenta solo una vez.</li>
+              <li>No se incluye como pasivo ni puede restar nuevamente.</li>
+              <li>Evita dobles descuentos que afecten la CDE.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pasivos">
+      <div class="container">
+        <h2>8. Detección de pasivos y deducciones</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Se consideran automáticamente</h3>
+            <ul>
+              <li>Valores negativos.</li>
+              <li>Libranzas, bancos, cooperativas.</li>
+              <li>Embargos y descuentos judiciales.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Proceso interno</h3>
+            <ol>
+              <li>Identificación por patrones y palabras clave.</li>
+              <li>Clasificación por tipo (banco, cooperativa, judicial).</li>
+              <li>Suma de pasivos para el cálculo de CDE.</li>
+            </ol>
+            <p class="note">Regla clave: salud nunca se considera pasivo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calculo">
+      <div class="container">
+        <h2>9. Fórmula definitiva de cálculo (CDE)</h2>
+        <div class="grid">
+          <div class="card card--code">
+            <pre><code>Ingreso neto = Ingreso total – Salud
+Capacidad neta = (Ingreso neto ÷ 2) – Margen
+CDE = Capacidad neta – Pasivos (sin contar Salud)
+CDE con compra = CDE + Cartera seleccionada para compra</code></pre>
+          </div>
+          <div class="card">
+            <h3>Notas</h3>
+            <ul>
+              <li>Margen se obtiene automáticamente según la pagaduría oficial.</li>
+              <li>Salud no se cuenta como pasivo.</li>
+              <li>CDE con compra suma pasivos seleccionados para refinanciar.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="simulacion">
+      <div class="container">
+        <h2>10. Simulación de compra de cartera</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Comportamiento</h3>
+            <ul>
+              <li>Tabla con todos los pasivos detectados.</li>
+              <li>Selección por pasivo (✅ se suma, ❌ se resta).</li>
+            </ul>
+          </div>
+          <div class="card card--code">
+            <pre><code>CDE NUEVA = CDE + Cartera seleccionada para compra</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pagadurias">
+      <div class="container">
+        <h2>11. Pagadurías oficiales</h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Pagaduría</th>
+                <th>Margen</th>
+                <th>Sector</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>COLPENSIONES</td><td>3000</td><td>NACIONAL</td></tr>
+              <tr><td>FOPEP</td><td>5000</td><td>NACIONAL</td></tr>
+              <tr><td>FIDUPREVISORA</td><td>5100</td><td>NACIONAL</td></tr>
+              <tr><td>POSITIVA</td><td>5000</td><td>NACIONAL</td></tr>
+              <tr><td>CASUR</td><td>20000</td><td>NACIONAL</td></tr>
+              <tr><td>CREMIL</td><td>10000</td><td>NACIONAL</td></tr>
+              <tr><td>COLFONDOS</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>MAPFRE</td><td>5100</td><td>PRIVADO</td></tr>
+              <tr><td>PORVENIR</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>SEGUROS ALFA</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>SKANDIA</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>SURA</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>ARL SURA</td><td>5000</td><td>PRIVADO</td></tr>
+              <tr><td>PROTECCION</td><td>3000</td><td>PRIVADO</td></tr>
+              <tr><td>ASULADO</td><td>3000</td><td>PRIVADO</td></tr>
+              <tr><td>SECRETARÍAS DE EDUCACIÓN</td><td>20000</td><td>SEC EDU</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Detectadas automáticamente, con posibilidad de corrección manual.</p>
+      </div>
+    </section>
+
+    <section class="section" id="historial">
+      <div class="container">
+        <h2>12. Historial y trazabilidad</h2>
+        <div class="grid">
+          <div class="card">
+            <ul>
+              <li>Registro de usuario, rol, fecha y hora.</li>
+              <li>Nombre del cliente y pagaduría.</li>
+              <li>Ingreso total, salud y pasivos.</li>
+              <li>CDE original y CDE con compra.</li>
+              <li>Archivo original renombrado con el nombre del cliente.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>13. Descarga de evidencias</h3>
+            <ul>
+              <li>Documento original.</li>
+              <li>Informe de cálculo.</li>
+              <li>Detalle de pasivos.</li>
+              <li>Simulación de compra de cartera.</li>
+            </ul>
+            <p class="note">Identificación completa: cliente, usuario, fecha, hora, pagaduría.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="integraciones">
+      <div class="container">
+        <h2>14. Integración con Google Sheets</h2>
+        <div class="card">
+          <ul>
+            <li>Cada documento genera automáticamente una fila en la hoja.</li>
+            <li>Evita errores de digitación manual.</li>
+            <li>Permite reportes masivos y seguimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arquitectura">
+      <div class="container">
+        <h2>15. Arquitectura recomendada</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Frontend</h3>
+            <p>React o Vue.js, interfaz responsiva y segura.</p>
+          </div>
+          <div class="card">
+            <h3>Backend</h3>
+            <p>Python + FastAPI o Node.js, microservicios para OCR y cálculo.</p>
+          </div>
+          <div class="card">
+            <h3>Base de datos</h3>
+            <p>PostgreSQL o MySQL.</p>
+          </div>
+          <div class="card">
+            <h3>Servicios externos</h3>
+            <p>Google Sheets API, SMS gateway.</p>
+          </div>
+          <div class="card">
+            <h3>Seguridad</h3>
+            <p>HTTPS, hash de contraseñas (bcrypt), control de roles.</p>
+          </div>
+          <div class="card">
+            <h3>Escalabilidad</h3>
+            <p>Microservicios independientes, auditoría centralizada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cierre">
+      <div class="container">
+        <h2>16. Cierre final</h2>
+        <div class="grid">
+          <div class="card">
+            <ul>
+              <li>Aplica la lógica real de nómina y libranzas.</li>
+              <li>Evita dobles descuentos.</li>
+              <li>Permite auditoría total y trazabilidad.</li>
+              <li>Escalable y listo para producción.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Próximos pasos</h3>
+            <ol>
+              <li>Crear diagrama de flujo completo del sistema.</li>
+              <li>Transformar procesos en tareas técnicas y backlog.</li>
+              <li>Desarrollar código base con OCR, cálculo, almacenamiento y reporte.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Documento maestro convertido a sitio web para presentación y alineación del equipo.</p>
+    </div>
+  </footer>
+</body>
+</html>
