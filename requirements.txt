@@ -1,1 +1,1 @@
-
+# No Python dependencies required for the static site.

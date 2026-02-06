@@ -26,6 +26,7 @@ comando de inicio sea `python server.py`.
 Si Render muestra el error `Could not open requirements file`, asegúrate de que el
 archivo `requirements.txt` exista en la raíz del repositorio (aunque esté vacío,
 Render lo busca durante el build).
+También confirma que el servicio esté apuntando al `rootDir` correcto (`.`).
 
 ## Archivos principales
 
