@@ -3,6 +3,6 @@ services:
     name: cdeccdc
     runtime: python
     rootDir: .
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "bash render-build.sh"
     startCommand: "python server.py"
     autoDeploy: true

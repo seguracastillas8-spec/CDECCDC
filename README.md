@@ -23,10 +23,9 @@ El archivo `render.yaml` configura el despliegue automático como servicio web e
 Si ves un **503 Service Unavailable**, verifica que el servicio esté activo y que el
 comando de inicio sea `python server.py`.
 
-Si Render muestra el error `Could not open requirements file`, asegúrate de que el
-archivo `requirements.txt` exista en la raíz del repositorio (aunque esté vacío,
-Render lo busca durante el build).
-También confirma que el servicio esté apuntando al `rootDir` correcto (`.`).
+Si Render muestra el error `Could not open requirements file`, el script
+`render-build.sh` crea automáticamente un `requirements.txt` vacío antes de instalar
+dependencias. También confirma que el servicio esté apuntando al `rootDir` correcto (`.`).
 
 ## Archivos principales
 
@@ -35,3 +34,4 @@ También confirma que el servicio esté apuntando al `rootDir` correcto (`.`).
 - `server.py`: servidor local para previsualización.
 - `render.yaml`: configuración de despliegue en Render.
 - `requirements.txt`: archivo requerido por Render durante el build.
+- `render-build.sh`: script de build para Render (crea requirements.txt si falta).
