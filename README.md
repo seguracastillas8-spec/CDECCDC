@@ -17,8 +17,15 @@ Luego abre en tu navegador:
 http://localhost:8000/index.html
 ```
 
+## Despliegue en Render
+
+El archivo `render.yaml` configura el despliegue automático como servicio web en Render.
+Si ves un **503 Service Unavailable**, verifica que el servicio esté activo y que el
+comando de inicio sea `python server.py`.
+
 ## Archivos principales
 
 - `index.html`: contenido del documento en formato web.
 - `styles.css`: estilos del sitio.
 - `server.py`: servidor local para previsualización.
+- `render.yaml`: configuración de despliegue en Render.
